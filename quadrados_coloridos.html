@@ -1,0 +1,78 @@
+<canvas width="600" height="400">
+
+<script>
+
+var tela = document.querySelector('canvas'); //seleciona o arquivo do html para usar no jS e atribui o parametro para a variável//
+var pincel = tela.getContext('2d'); 
+
+function desenhaQuadrado(x, y, cor) //parametros//
+ {
+    pincel.fillStyle = cor;
+    pincel.fillRect(x, y, 50, 50);
+    pincel.fillStroke = "black"; //stroke = borda//
+    pincel.strokeRect(x, y, 50, 50); //dimensões da borda//
+}
+
+function linhaUm(valor) {
+
+var x = 50;
+var y = valor;
+while(x <= 600) {
+   desenhaQuadrado(x, y, "pink");
+   x = x + 100;
+}
+
+var x = 0;
+var y = valor;
+while(x <= 600) {
+   desenhaQuadrado(x, y, "blue");
+   x = x + 100;
+}
+}
+
+function linhaDois(valor) {
+
+   var x = 0;
+var y = valor;
+while(x <= 600) {
+   desenhaQuadrado(x, y, "pink");
+   x = x + 100;
+}
+
+var x = 50;
+var y = valor;
+while(x <= 600) {
+   desenhaQuadrado(x, y, "blue");
+   x = x + 100;
+}
+}
+
+linhaUm(0, 0);
+linhaDois(50, 50);
+linhaUm(100, 100);
+linhaDois(150, 150);
+linhaUm(200, 200);
+linhaDois(250, 250);
+linhaUm(300, 300);
+linhaDois(350, 350);
+// for(var x= 0, x > 600; x = x + 50) {} //
+/*
+desenhaQuadrado(0, 0, "blue");
+desenhaQuadrado(50, 0, "pink");
+desenhaQuadrado(100, 0, "blue");
+desenhaQuadrado(150, 0, "pink");
+desenhaQuadrado(0, 50, "pink");
+desenhaQuadrado(0, 100, "blue");
+desenhaQuadrado(0, 150, "pink");
+desenhaQuadrado(50, 50, "blue");
+desenhaQuadrado(50, 100, "pink");
+desenhaQuadrado(50, 150, "blue");
+desenhaQuadrado(100, 50, "pink");
+desenhaQuadrado(100, 100, "blue");
+desenhaQuadrado(100, 150, "pink");
+desenhaQuadrado(150, 50, "blue");
+desenhaQuadrado(150, 100, "pink");
+desenhaQuadrado(150, 150, "blue");
+*/
+
+</script>
